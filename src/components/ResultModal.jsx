@@ -1,4 +1,3 @@
-import { useCallback } from "react";
 import "./ResultModal.style.css";
 
 export default function ResultModal({ handleClickReset, stage }) {
