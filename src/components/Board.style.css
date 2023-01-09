@@ -1,0 +1,36 @@
+.board_container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+}
+
+.line_wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.board_cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 30%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.button-start {
+  all: unset;
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(to right, #77a1d3, #79cbca, #e684ae);
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}

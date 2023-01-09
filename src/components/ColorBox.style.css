@@ -1,0 +1,7 @@
+.colorbox {
+  background-color: teal;
+  flex: 1;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.status_container {
+  display: inline-flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+span {
+  margin: 0 10px;
+}
