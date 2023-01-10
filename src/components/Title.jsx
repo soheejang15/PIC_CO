@@ -1,13 +1,12 @@
-export default function Title() {
+import logo from "../logo.png";
+
+export default function Logo() {
   return (
-    <h1
-      style={{
-        background: "linear-gradient(to right, #77a1d3, #79cbca, #e684ae)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent"
-      }}
-    >
-      PIC_CO
-    </h1>
+    <img
+      src={logo}
+      alt="Logo"
+      width={360}
+      style={{ display: "block", margin: "28px auto" }}
+    />
   );
 }
