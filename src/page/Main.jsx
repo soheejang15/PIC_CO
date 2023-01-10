@@ -13,22 +13,18 @@ import { GAME_STATUS } from "../constant";
 
 export default function Main() {
   const { time, startTimer, deductTimer, stopTimer } = useTimer();
-  const {
-    gameStatus,
-    changeToStandby,
-    changeToOnGoing,
-    changeToOver
-  } = useGameStatus({
-    onChangeStatus: status => {
-      if (status === GAME_STATUS.STANDBY) {
-        resetGame();
-      } else if (status === GAME_STATUS.ONGOING) {
-        startGame();
-      } else if (status === GAME_STATUS.OVER) {
-        stopTimer();
-      }
-    }
-  });
+  const { gameStatus, changeToStandby, changeToOnGoing, changeToOver } =
+    useGameStatus({
+      onChangeStatus: (status) => {
+        if (status === GAME_STATUS.STANDBY) {
+          resetGame();
+        } else if (status === GAME_STATUS.ONGOING) {
+          startGame();
+        } else if (status === GAME_STATUS.OVER) {
+          stopTimer();
+        }
+      },
+    });
   const [stage, setStage] = useState(0);
   const [stageAnswer, setStageAnswer] = useState(null);
   const [currentLevel, setCurrentLevel] = useState(2);
@@ -37,7 +33,7 @@ export default function Main() {
     if (time <= 0 && gameStatus === GAME_STATUS.ONGOING) {
       changeToOver();
     }
-  }, [time]);
+  }, [time, changeToOver, gameStatus]);
 
   const resetGame = () => {
     setStage(0);
